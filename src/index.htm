@@ -16,11 +16,19 @@
 </head>
 
 <body>
-  <h1>Hello</h1>
+  <h1>String Manipulations</h1>
   <div id="app">
     <input v-model="name" placeholder="Name">
-    <button v-on:click="sayHello()" class="btn btn-primary">Say hello</button>
-    <div>{{ greeting }}</div>
+    <select v-model="operation">
+      <option>toUpperCase</option>
+      <option>toLowerCase</option>
+      <option>invertCase</option>
+      <option>reverse</option>
+      <option>meme</option>
+      <option>toCharNumbers</option>
+    </select>
+    <button class="btn btn-primary" v-on:click="manipulateString()">Do it!</button>
+    <div>{{ output }}</div>
   </div>
 
   <script src="bundle.js"></script>
